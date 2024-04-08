@@ -18,7 +18,10 @@ window.onload = function () {
         }
     });
 
-    yesButton.addEventListener("click", () => {
-        window.close();
+    yesButton.addEventListener("click", function() {
+        var phoneNumber = "6282286923252"; // Ganti dengan nomor WhatsApp Anda
+        var message = "Halo! Saya tertarik untuk pergi. Kapan dan di mana kita bisa bertemu?";
+        var url = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+        window.open(url, '_blank');
     });
 }
